@@ -16,8 +16,8 @@ int main()
     // std::cin >> command; // can't do because it will only print before the whitespace
     std::getline(std::cin, command); // getline() reads everything the user types until they press the Enter key,
 
-    if (command == "exit")
-    { // exit command
+    if (command == "exit") // exit command
+    {
       return 0;
     }
     std::cout << command << ": command not found" << std::endl;
