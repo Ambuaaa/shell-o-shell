@@ -7,7 +7,7 @@ int main()
   std::cout << std::unitbuf;
   std::cerr << std::unitbuf;
 
-  while (1)
+  while (1) // repl
   {
     std::cout << "$ ";
 
@@ -15,6 +15,11 @@ int main()
     std::string command;
     // std::cin >> command; // can't do because it will only print before the whitespace
     std::getline(std::cin, command); // getline() reads everything the user types until they press the Enter key,
-    std::cout << command << ": command not found" << std::endl;
+
+    if (command == "exit")
+    { // exit command
+      return 0;
     }
+    std::cout << command << ": command not found" << std::endl;
+  }
 }
