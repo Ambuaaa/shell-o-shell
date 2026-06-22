@@ -11,7 +11,8 @@ int main()
   std::cout << "$ ";
 
   // handling invalid comments
-  std::string str;
-  std::cin >> str;
-  std::cout << str << ": command not found";
+  std::string command;
+  // std::cin >> command; // can't do because it will only print before the whitespace
+  std::getline(std::cin, command); // getline() reads everything the user types until they press the Enter key,
+  std::cout << command << ": command not found" << std::endl;
 }
