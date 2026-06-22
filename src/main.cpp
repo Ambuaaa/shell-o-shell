@@ -7,7 +7,7 @@ int main()
   std::cout << std::unitbuf;
   std::cerr << std::unitbuf;
 
-  while (1) // repl
+  while (1) // REPL
   {
     std::cout << "$ ";
 
@@ -20,6 +20,12 @@ int main()
     {
       break;
     }
+
+    if (command == "echo") // echo command
+    {
+      std::cout << command << std::endl;
+    }
+
     std::cout << command << ": command not found" << std::endl;
   }
 }
