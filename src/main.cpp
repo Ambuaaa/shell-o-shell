@@ -24,6 +24,7 @@ int main()
     if (command == "echo") // echo command
     {
       std::cout << command << std::endl;
+      return 0;
     }
 
     std::cout << command << ": command not found" << std::endl;
