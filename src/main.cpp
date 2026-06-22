@@ -23,7 +23,7 @@ int main()
 
     if (command.substr(0, 5) == "echo ") // echo command
     {
-      std::cout << command.erase(0, 5) << std::endl;
+      std::cout << command.erase(0, 4) << std::endl;
       return 0;
     }
 
