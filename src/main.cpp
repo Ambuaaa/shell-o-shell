@@ -7,12 +7,14 @@ int main()
   std::cout << std::unitbuf;
   std::cerr << std::unitbuf;
 
-  // TODO: Uncomment the code below to pass the first stage
-  std::cout << "$ ";
+  while (1)
+  {
+    std::cout << "$ ";
 
-  // handling invalid comments
-  std::string command;
-  // std::cin >> command; // can't do because it will only print before the whitespace
-  std::getline(std::cin, command); // getline() reads everything the user types until they press the Enter key,
-  std::cout << command << ": command not found" << std::endl;
+    // handling invalid comments
+    std::string command;
+    // std::cin >> command; // can't do because it will only print before the whitespace
+    std::getline(std::cin, command); // getline() reads everything the user types until they press the Enter key,
+    std::cout << command << ": command not found" << std::endl;
+    }
 }
