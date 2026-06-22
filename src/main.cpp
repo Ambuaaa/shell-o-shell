@@ -20,13 +20,13 @@ int main()
     {
       break;
     }
-
-    if (command.substr(0, 5) == "echo ") // echo command
+    else if (command.substr(0, 5) == "echo ") // echo command
     {
-      std::cout << command.erase(0, 4) << std::endl;
-      return 0;
+      std::cout << command.substr(5) << std::endl; // start at index and grab every character till the end
     }
-
-    std::cout << command << ": command not found" << std::endl;
+    else
+    {
+      std::cout << command << ": command not found" << std::endl;
+    }
   }
 }
