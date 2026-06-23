@@ -24,6 +24,10 @@ int main()
     {
       std::cout << command.substr(5) << std::endl; // start at index and grab every character till the end
     }
+    else if (command.substr(0, 9) == "type echo" || command.substr(0, 9) == "type exit" || command.substr(0, 9) == "type type") // type command
+    {
+      std::cout << command.substr(5) << " " << "is a shell builtin" << std::endl;
+    }
     else
     {
       std::cout << command << ": command not found" << std::endl;
