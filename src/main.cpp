@@ -24,9 +24,17 @@ int main()
     {
       std::cout << command.substr(5) << std::endl; // start at index and grab every character till the end
     }
-    else if (command.substr(0, 9) == "type echo" || command.substr(0, 9) == "type exit" || command.substr(0, 9) == "type type") // type command
-    {
-      std::cout << command.substr(5) << " " << "is a shell builtin" << std::endl;
+    else if (command.length() >= 5 && command.substr(0, 5) == "type ") // type command
+    {                                                                  // putting ()>5 due to ls, cd , pwd
+      std::string target = command.substr(5);
+      if (target == "echo" || target == "exit" || target == "type")
+      {
+        std::cout << target << " is a shell builtin" << std::endl;
+      }
+      else
+      {
+        std::cout << target << ": not found" << std::endl;
+      }
     }
     else
     {
